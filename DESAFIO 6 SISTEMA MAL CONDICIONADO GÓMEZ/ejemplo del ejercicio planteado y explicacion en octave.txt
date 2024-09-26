@@ -1,0 +1,53 @@
+>> A = [2, 4, 5; 6, 9, 8; 4.1, 5, 3];
+>> b = [220; 490; 274];
+>> % Mostrar la matriz A y el vector b
+>> disp('Matriz A:');
+Matriz A:
+>> disp(A);
+   2.0000   4.0000   5.0000
+   6.0000   9.0000   8.0000
+   4.1000   5.0000   3.0000
+>> disp('Vector b:');
+Vector b:
+>> disp(b);
+   220
+   490
+   274
+>> % Resolver el sistema de ecuaciones
+>> x = A \ b;
+>> % Calcular el determinante de A
+>> det_A = det(A);
+>> % Calcular la condición de la matriz A
+>> cond_A = cond(A);
+>> % Mostrar los resultados
+>> disp('Solución del sistema (x):');
+Solución del sistema (x):
+>> disp(x);
+   40
+   10
+   20
+>> disp('Determinante de A:');
+Determinante de A:
+>> disp(det_A);
+-1.3000
+>> disp('Condición de la matriz A:');
+Condición de la matriz A:
+>> disp(cond_A);
+449.86
+>> % Verificar la sensibilidad a pequeños cambios
+>> A_mod = A;
+>> A_mod(3,1) = 4.2; % Cambiar ligeramente un coeficiente
+>> x_mod = A_mod \ b;
+>> disp('Matriz A modificada:');
+Matriz A modificada:
+>> disp(A_mod);
+   2.0000   4.0000   5.0000
+   6.0000   9.0000   8.0000
+   4.2000   5.0000   3.0000
+>> disp('Nueva solución del sistema con A modificada (x_mod):');
+Nueva solución del sistema con A modificada (x_mod):
+>> disp(x_mod);
+   20.000
+   31.538
+   10.769
+>>
